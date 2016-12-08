@@ -3,13 +3,25 @@ package studenttester;
 
 public class Student extends Person{
     
-    private int ID;
+    private final int ID;
     private double GPA;
     
+    public static class NextID {
+        
+        static int studentID = 100;
+        public NextID() {
+            studentID = studentID+1;
+        }
+        
+        
+    }
+    
+    NextID studentID = new NextID();
         
     public Student(String name, int age) {
         super(name, age);
         this.GPA = 4.0;
+        this.ID = NextID.studentID;
     }   
     
     
@@ -18,7 +30,7 @@ public class Student extends Person{
        if(GPA <=4.0 && GPA >= 0) {
            this.GPA = GPA;
        }
-       
+       this.ID = NextID.studentID;
     }
 
     public int getID() {

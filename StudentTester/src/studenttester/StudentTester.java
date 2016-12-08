@@ -22,6 +22,8 @@ public class StudentTester {
     
 
     public static void main(String[] args) {
+       
+        
         Person p = new Person("Joe Anderson", 19);
         p.setName("jordan");
         p.setAge(20);
@@ -43,6 +45,8 @@ public class StudentTester {
         prettyPrint(p);
         prettyPrint(s1);
         prettyPrint(s2);
+        
+        
         
     }
     
